@@ -8,6 +8,9 @@ export default Ember.Component.extend({
         this.sendAction('destroyRental', rental);
       }
     },
+    update(rental, params) {
+      this.sendAction('update', rental, params);
+    },
     imageShow: function() {
       this.set('isImageShowing', true);
     },

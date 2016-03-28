@@ -8,12 +8,12 @@ export default Ember.Component.extend({
     },
 
     saveAnnouncement() {
-      var params2 = {
+      var params = {
         date: this.get('date') ? this.get('date'): "",
         message: this.get('message') ? this.get('message'): ""
       };
       this.set("addNewAnnouncement", false),
-      this.sendAction('saveAnnouncement', params2);
+      this.sendAction('saveAnnouncement', params);
     }
   }
 });
