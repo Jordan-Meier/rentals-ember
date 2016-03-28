@@ -1,8 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
+  rentalModel() {
     return this.store.findAll('rental');
+  },  
+  announcementModel() {
+    return this.store.findAll('announcement');
   },
 
   actions: {
@@ -11,7 +14,7 @@ export default Ember.Route.extend({
       newRental.save();
       this.transitionTo('index');
     },
-    
+
     destroyRental(rental) {
       rental.destroyRecord();
       this.transitionTo('index');
