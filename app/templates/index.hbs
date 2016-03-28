@@ -5,7 +5,7 @@ We hope you find exactly what you're looking for in a place to stay.
 <h2>Announcements</h2>
 <ul>
   {{#each model.announcements as |announcement|}}
-    {{announcement-tile announcement=announcement}}
+    {{announcement-tile announcement=announcement destroyAnnouncement="destroyAnnouncement"}}
     {{log announcement}}
   {{/each}}
 </ul>
